@@ -93,7 +93,7 @@ body {
   box-shadow: var(--shadow-hover), 0 0 0 1px var(--accent-glow);
 }
 
-/* Projects */
+/* Projects - ALL 9 */
 .projects-grid {
   display: grid; grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
   gap: 24px; margin: 40px 0;
@@ -111,12 +111,16 @@ body {
   width: 100%; height: 200px; border-radius: 12px;
   margin-bottom: 20px; background-size: cover; background-position: center;
 }
+/* All 9 thumbnails */
 .control-thumb { background: linear-gradient(135deg, #1e3a8a, #3b82f6); }
 .aircraft-thumb { background: linear-gradient(135deg, #1e40af, #60a5fa); }
 .motor-thumb { background: linear-gradient(135deg, #1e293b, #475569); }
 .power-thumb { background: linear-gradient(135deg, #1e1b4b, #4f46e5); }
 .thermal-thumb { background: linear-gradient(135deg, #0f172a, #334155); }
 .aero-thumb { background: linear-gradient(135deg, #0f766e, #14b8a6); }
+.cad-thumb { background: linear-gradient(135deg, #059669, #10b981); }
+.machine-thumb { background: linear-gradient(135deg, #4b5563, #6b7280); }
+.tl-thumb { background: linear-gradient(135deg, #1e40af, #3b82f6); }
 .project-card h3 { margin: 0 0 8px; font-size: 1.3em; }
 .project-tech {
   color: var(--accent); font-size: 0.95em; font-weight: 600;
@@ -130,7 +134,6 @@ body {
 }
 .skill-category h3 {
   color: var(--text-strong); font-size: 1.4em; margin: 0 0 20px;
-  display: flex; align-items: center; gap: 12px;
 }
 .skill-tags {
   display: flex; flex-wrap: wrap; gap: 8px;
@@ -179,7 +182,8 @@ body {
 .section { padding: 80px 0; }
 .section h2 {
   font-size: clamp(2rem, 4vw, 3rem); font-weight: 800;
-  text-align: center; margin: 0 0 60px; background: linear-gradient(135deg, var(--text), var(--text-muted));
+  text-align: center; margin: 0 0 60px; 
+  background: linear-gradient(135deg, var(--text), var(--text-muted));
   -webkit-background-clip: text; background-clip: text;
 }
 .hr { height: 1px; background: linear-gradient(90deg, transparent, var(--border), transparent); margin: 32px 0; }
@@ -189,6 +193,7 @@ body {
 }
 .stats div { text-align: center; font-size: 1.1em; }
 .stats strong { display: block; font-size: 2em; color: var(--accent); }
+.projects-cta { text-align: center; margin-top: 40px; }
 
 /* Lists */
 .list { color: var(--text-muted); padding-left: 20px; margin: 16px 0; }
