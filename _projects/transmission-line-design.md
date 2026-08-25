@@ -5,7 +5,7 @@ description: Design and optimization study for transmitting 800 MW over 160 km w
 category: Power Systems
 group: power
 date_label: December 2024
-order: 9
+order: 4
 image: "/img/projects/transmission-line.png"
 pdf: "/projects/transmission-line.pdf"
 tools:
