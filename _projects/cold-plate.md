@@ -3,7 +3,7 @@ layout: project
 title: Cold Plate Thermal Management Design Study
 description: Comparative cold-plate design study for power-electronics cooling with thermal, hydraulic, and material-efficiency evaluation.
 category: Mechanical / CFD
-group: mechanical
+group:  thermal
 date_label: May 2025
 order: 2
 image: "/img/projects/cold-plate.png"
