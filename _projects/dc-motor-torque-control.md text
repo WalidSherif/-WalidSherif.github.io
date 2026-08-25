@@ -5,7 +5,7 @@ description: Electrical modeling and comparison of torque-control strategies for
 category: Controls / Machines
 group: controls
 date_label: May 2025
-order: 7
+order: 11
 image: "/img/projects/dc-motor-torque-control.png"
 pdf: "/projects/DC_motor_with_torque_control-4.pdf"
 tools:
