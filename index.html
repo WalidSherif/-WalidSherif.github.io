@@ -177,7 +177,7 @@ description: Walid Sherif — power-systems analysis, grid integration, grid-awa
       <div class="metric-grid">
         <div class="metric-card">
           <span class="metric-card__value">1,258.8 MW</span>
-          <span class="metric-card__label">Final data-center allocation</span>
+          <span class="metric-card__label">Final source-constrained allocation</span>
         </div>
         <div class="metric-card">
           <span class="metric-card__value">2,891</span>
@@ -233,13 +233,13 @@ description: Walid Sherif — power-systems analysis, grid integration, grid-awa
           </li>
           <li class="timeline-item">
             <p class="timeline-stage">Stage 6</p>
-            <h3>Mixed-Integer Nonlinear Optimization</h3>
-            <p>Discrete site/island/bus/assignment decisions + continuous MW/MVAr allocation + nonlinear AC power-flow physics. Solved as a three-stage decomposition: assignment MILP (SCIP via PySCIPOpt) then MISOCP per island (Jabr SOC branch-flow relaxation). Gurobi was evaluated but unavailable — the final stack is open-source.</p>
+            <h3>Mixed-Integer Nonlinear Planning — MILP / MISOCP Decomposition</h3>
+            <p>Discrete site/island/bus/assignment decisions + continuous MW/MVAr allocation + nonlinear AC power-flow physics: a large-scale mixed-integer nonlinear planning problem. Solved by hierarchical decomposition — a global assignment MILP (SCIP via PySCIPOpt) then an MISOCP per island (Jabr SOC branch-flow relaxation) — not a monolithic MINLP solver. Gurobi was evaluated but unavailable; the final stack is open-source.</p>
           </li>
           <li class="timeline-item">
             <p class="timeline-stage">Stage 7</p>
             <h3>AC + N-1 Validation</h3>
-            <p>Optimization → candidate feasibility → AC power flow → voltage/line-loading checks → final-placement validation → 225-contingency N-1 study. No optimization output accepted without an electrical certificate.</p>
+            <p>Optimization → candidate feasibility → AC power flow → voltage/line-loading checks → final-placement validation → 225-contingency N-1 study. No optimization output was accepted without passing the electrical validation checks.</p>
           </li>
           <li class="timeline-item timeline-item--final">
             <p class="timeline-stage">Final Result</p>
