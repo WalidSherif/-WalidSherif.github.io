@@ -640,13 +640,20 @@ description: Walid Sherif — power-systems analysis, grid integration, grid-awa
 
           <div class="project-card__body">
 
-            <p class="project-card__category">
-              {{ project.category }}
-            </p>
+  <div class="project-card__meta">
+    <p class="project-card__category">
+      {{ project.category }}
+    </p>
+    {% if project.date_label %}
+    <p class="project-card__date">
+      {{ project.date_label }}
+    </p>
+    {% endif %}
+  </div>
 
-            <h3 class="project-card__title">
-              {{ project.title }}
-            </h3>
+  <h3 class="project-card__title">
+    {{ project.title }}
+  </h3>
 
             <p class="project-card__description">
               {{ project.description }}
