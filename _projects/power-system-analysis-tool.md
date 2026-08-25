@@ -5,7 +5,7 @@ description: "Five-bus power-system study with a from-scratch Newton-Raphson loa
 category: Power Systems
 group: power
 date_label: May 2026
-order: 4
+order: 5
 image: "/img/research/ieee118-bus47.png"
 pdf: "/projects/power-system-analysis-tool.pdf"
 tools:
