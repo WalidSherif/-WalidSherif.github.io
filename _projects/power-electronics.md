@@ -7,7 +7,7 @@ group: power-elec
 date_label: August 2026
 order: 3
 image: "/img/projects/power-electronics-inverter.png"
-report: "/projects/power_electronics_project.pdf"
+pdf: "/projects/power_electronics_project.pdf"
 tools:
   - MATLAB
   - Simulink
