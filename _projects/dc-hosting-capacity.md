@@ -75,7 +75,7 @@ evaluations, demonstrating that the objective formulation — not search luck �
 This stage established the constraint framework (0.95–1.05 pu, 100% loading limits, baseline-aware
 feasibility) and the optimizer-validation pattern later scaled to the 2,891-bus Virginia network,
 where exhaustive enumeration is impossible and the formulation evolves into mixed-integer nonlinear
-optimization with AC certificates.
+optimization with AC validation checks.
 
 ## Engineering Significance
 
