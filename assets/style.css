@@ -243,6 +243,70 @@ html[data-theme="dark"] .site-header {
   margin-top: 28px;
 }
 
+.hero-tags {
+  margin-top: 26px;
+  display: grid;
+  gap: 10px;
+}
+
+.hero-tag-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 6px 10px;
+}
+
+.hero-tag-row__label {
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  min-width: 118px;
+}
+
+.hero-tag-row__items {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.hero-tag-row__items span + span::before {
+  content: "•";
+  color: var(--primary);
+  margin: 0 8px;
+  font-weight: 400;
+}
+
+/* Research focus cards */
+
+.focus-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.focus-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 22px;
+  border-top: 3px solid var(--primary);
+}
+
+.focus-card h3 {
+  margin: 0 0 8px;
+  font-size: 1.08rem;
+  letter-spacing: -0.01em;
+}
+
+.focus-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.96rem;
+}
+
 .hero-side {
   display: grid;
   gap: 18px;
@@ -1071,6 +1135,10 @@ html[data-theme="dark"] .filter-btn.active {
     grid-template-columns: 1fr 1fr;
   }
 
+  .focus-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
   .metric-grid {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -1119,6 +1187,7 @@ html[data-theme="dark"] .filter-btn.active {
   .skills-grid,
   .duo-grid,
   .figure-grid,
+  .focus-grid,
   .metric-grid {
     grid-template-columns: 1fr;
   }
