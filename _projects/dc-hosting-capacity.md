@@ -1,7 +1,7 @@
 ---
 layout: project
-title: "Data-Center Hosting Capacity on IEEE 33-Bus & 118-Bus Test Systems"
-description: "Foundation of the data-center research: 50 MW load placement on IEEE test feeders using exhaustive enumeration, Genetic Algorithm, and Particle Swarm Optimization, with per-bus hosting-capacity sweeps and full AC feasibility screening in pandapower."
+title: "Protection-Aware Data-Center Hosting Capacity — IEEE 33 & 118"
+description: "Foundation of the data-center research: large-load hosting capacity and protection screening on the IEEE 33-bus and 118-bus systems, with exhaustive enumeration, Genetic Algorithm, and Particle Swarm Optimization placement search, per-bus hosting-capacity sweeps, and short-circuit studies in pandapower."
 category: Power Systems Research
 group: power
 date_label: 2025 – 2026
@@ -15,7 +15,7 @@ tools:
   - SciPy (Differential Evolution)
 metrics:
   - value: "50 MW"
-    label: "Data-center load at 0.95 PF"
+    label: "Data-center load class at 0.95 PF"
   - value: "118"
     label: "Candidate buses enumerated"
   - value: "285.6 MW"
@@ -24,7 +24,8 @@ metrics:
     label: "Line overloads at optimal bus"
 highlights:
   - "Defined the core research question: where can a large data-center load be connected while keeping all bus voltages within 0.95–1.05 pu and all line loadings within limits?"
-  - "Screened the IEEE 33-bus distribution feeder, then scaled to the IEEE 118-bus transmission system with complete enumeration of all 118 candidate buses."
+  - "Screened the IEEE 33-bus distribution feeder — including a 16.5 MW data-center load pilot at bus 18 with voltage-violation checks — then scaled to the IEEE 118-bus transmission system with complete enumeration of all 118 candidate buses."
+  - "Added protection awareness: maximum and minimum three-phase fault-current screening with pandapower's IEC 60909 short-circuit module (bounded external-grid sources, 250 °C line end-temperature) to characterize fault levels alongside steady-state limits."
   - "Computed per-bus maximum hosting capacity via bisection search — up to 285.6 MW addable at the strongest bus — and ranked all buses by a combined voltage-deviation and loss objective."
   - "Implemented Genetic Algorithm (PyGAD), Particle Swarm Optimization (PySwarms), and Differential Evolution (SciPy) as metaheuristic placement searchers; all converged on the same optimal bus as exhaustive enumeration, cross-validating the formulation."
   - "Treated baseline network weaknesses honestly: pre-existing voltage violations excluded from feasibility counting so results measure new impact only."
@@ -43,7 +44,11 @@ The framework is built on **pandapower** with every tunable parameter — load s
 penalty weights, optimizer hyper-parameters, random seeds — centralized for reproducibility.
 
 - **IEEE 33-bus feeder:** initial power-flow screening of voltage behavior and hosting-capacity
-  concepts on a radial distribution network.
+  concepts on a radial distribution network, including a **16.5 MW data-center load pilot at bus 18**
+  with voltage-violation checks.
+- **Protection screening:** maximum and minimum three-phase fault currents computed with
+  pandapower's IEC 60909 short-circuit module (bounded external-grid sources, 250 °C conductor
+  end-temperature), so placement decisions see fault levels — not only steady-state limits.
 - **IEEE 118-bus system:** complete enumeration of all 118 candidate buses. Each evaluation runs a
   Newton-Raphson power flow, then checks voltage limits (0.95–1.05 pu, with generator-controlled and
   baseline-violation buses excluded), line and transformer loading limits, and slack adequacy.
