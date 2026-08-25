@@ -3,7 +3,7 @@ layout: project
 title: HAWT Blade CFD, One-Way FSI, and Modal Analysis
 description: Integrated CAE workflow for a NACA 2424 horizontal-axis wind turbine blade combining 3D CFD, one-way FSI, and modal analysis.
 category: Mechanical / CFD
-group: mechanical
+group: renewable
 date_label: January 2026
 order: 1
 image: "/img/projects/cad-project.png"
