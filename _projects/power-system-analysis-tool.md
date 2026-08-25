@@ -6,7 +6,7 @@ category: Power Systems
 group: power
 date_label: May 2026
 order: 5
-image: "/img/research/ieee118-bus47.png"
+image: "img/projects/power-system-analysis-tool.png"
 pdf: "/projects/powersystemproject.pdf"
 tools:
   - MATLAB (Newton-Raphson implementation)
