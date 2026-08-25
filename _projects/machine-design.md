@@ -18,9 +18,9 @@ highlights:
   - Performed gear-force, torque, bending, and contact-stress calculations for both stages.
   - Contributed to casing design, oil seals, and overall assembly work using Autodesk Inventor.
   - Supported component-level validation and drawing preparation for a complete mechanical assembly.
+result: "Designed a two-stage 20:1 gearbox for a 55 kW application with complete mechanical calculations and CAD assembly."
 ---
 
 This project involved the mechanical design of a two-stage gearbox system for power transmission. The work included ratio selection, force and torque calculations, gear design checks, and mechanical component selection.
 
 In addition to the analytical calculations, the gearbox was modeled and assembled in CAD to verify fit, arrangement, and integration. The project emphasized practical design methodology, stress assessment, and documentation.
-result: Designed a two-stage 20:1 gearbox for a 55 kW application with complete mechanical calculations and CAD assembly.
