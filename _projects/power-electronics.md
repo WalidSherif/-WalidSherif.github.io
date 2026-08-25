@@ -3,7 +3,7 @@ layout: project
 title: Single-Phase Inverter Modulation Study
 description: MATLAB/Simulink study of inverter modulation strategies including square wave, SHE, bipolar PWM, unipolar PWM, and multilevel operation.
 category: Power Electronics
-group: power
+group:  power-elec
 date_label: December 2025
 order: 8
 image: "/img/projects/power-electronics-inverter.png"
