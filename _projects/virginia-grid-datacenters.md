@@ -64,6 +64,13 @@ The method exploits this structure with a three-stage hierarchical decomposition
 Site demand comes from **NREL county-level data-center capacity data**: 13 candidate sites across
 Virginia counties and cities totaling 11,559.4 MW.
 
+## Computational Framework
+
+Python with **pandapower** (AC power flow, N-1, validation) and **SCIP via PySCIPOpt** (assignment
+MILP and MISOCP subproblems). Gurobi was evaluated early in the project but was not available for
+the final work — the entire final pipeline runs on the open-source stack, which also keeps every
+result reproducible.
+
 ## Validation and Robustness
 
 - **Surrogate accuracy:** SOC-predicted losses vs true AC losses on 64 AC-benchmarked candidates —
