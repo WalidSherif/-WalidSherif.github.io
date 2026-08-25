@@ -1,7 +1,7 @@
 ---
 layout: project
 title: "Grid-Aware Data-Center Placement on a 2,891-Bus Virginia Network"
-description: "Mixed-integer nonlinear optimization of 13 data-center sites (11,559.4 MW requested) on a synthetic Virginia transmission network, with hierarchical MILP + SOC decomposition, full AC power-flow validation, and N-1 contingency analysis. Final source-constrained allocation: 1,258.8 MW."
+description: "Large-scale mixed-integer nonlinear planning problem — 13 data-center sites (11,559.4 MW requested) on a synthetic Virginia transmission network — solved through hierarchical MILP/MISOCP decomposition and verified with full AC power flow and N-1 contingency analysis. Final source-constrained allocation: 1,258.8 MW."
 category: Power Systems Research
 group: power
 date_label: 2026
@@ -42,8 +42,9 @@ question: **which buses on a realistic transmission network can host large data-
 much capacity — while every bus voltage stays within 0.95–1.05 pu and every line within its thermal
 rating?** At county scale this becomes a siting problem with discrete decisions (which sites, which
 electrical islands, which buses) coupled to continuous decisions (MW/MVAr allocation) through nonlinear
-AC power-flow relationships — a mixed-integer nonlinear programming (MINLP) formulation that does not
-decompose trivially.
+AC power-flow relationships — a large-scale **mixed-integer nonlinear planning problem**. It is not
+handed to a monolithic MINLP solver: the implementation solves it through hierarchical
+**MILP/MISOCP decomposition**, with every output verified against full AC power flow.
 
 ## Methodology
 
@@ -75,7 +76,7 @@ result reproducible.
 
 - **Surrogate accuracy:** SOC-predicted losses vs true AC losses on 64 AC-benchmarked candidates —
   Spearman ρ = 1.0000, Pearson r = 1.000000, max relative error 0.068%, 100% feasibility-verdict
-  agreement. The AC power flow remains the final certificate.
+  agreement. The AC power flow remains the final acceptance check.
 - **Candidate screening:** 68 candidate buses evaluated with `pp.runpp()` across the five largest
   sites; 64 feasible, 4 genuine infeasibilities.
 - **N-1 security (relevance-filtered set):** 225 contingencies (220 branches + 5 largest generators)
