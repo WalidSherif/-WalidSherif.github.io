@@ -18,9 +18,9 @@ highlights:
   - Designed a state-feedback controller with integral action to improve tracking and eliminate steady-state error.
   - Implemented the controller in real time using Arduino, encoder feedback, H-bridge actuation, and Simulink Connected I/O.
   - Evaluated closed-loop behavior experimentally and discussed actuator saturation and anti-windup considerations.
+result: "Achieved stable closed-loop motor-speed tracking through identified modeling, state feedback, and integral action."
 ---
 
 This project focused on real-time speed control of a DC motor using experimental modeling and state-space controller design. A first-order model was identified from measured data, then used to build a feedback controller with integral action.
 
 The controller was implemented through hardware interfacing and validated experimentally. The work emphasized practical control implementation, real-time testing, and interpretation of closed-loop performance.
-result: Achieved stable closed-loop motor-speed tracking through identified modeling, state feedback, and integral action.
