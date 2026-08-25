@@ -17,9 +17,9 @@ highlights:
   - Compared 345 kV, 500 kV, and 765 kV alternatives with respect to losses, voltage regulation, efficiency, and thermal constraints.
   - Used MATLAB to evaluate conductor configuration, bundle selection, and performance metrics.
   - Identified an optimal design based on 765 kV operation, three bundles per phase, two circuits, and Peachbell conductors.
+result: "Designed a transmission solution for delivering 800 MW over 160 km and identified the most effective voltage-level configuration."
 ---
 
 This project addressed the design of a long-distance high-voltage transmission line for large-scale power delivery. Different voltage levels and conductor configurations were evaluated to determine the most effective design from both technical and operational perspectives.
 
 The study used MATLAB-based calculations to compare losses, regulation, efficiency, and line limits, then selected an optimized configuration based on the full engineering trade-off.
-result: Designed a transmission solution for delivering 800 MW over 160 km and identified the most effective voltage-level configuration.
