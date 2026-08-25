@@ -17,9 +17,9 @@ highlights:
   - Compared field-resistance control, armature-voltage control, and armature-resistance control strategies.
   - Generated torque-speed plots to study how parameter changes affect operating behavior.
   - Summarized trade-offs in performance, losses, and controllability across the tested methods.
+result: "Compared three DC-motor torque-control methods and evaluated their torque-speed performance trade-offs."
 ---
 
 This project studied torque-control behavior in a shunt DC motor through mathematical modeling and comparison of multiple control methods. The analysis focused on how electrical parameter changes influence torque-speed characteristics and operating regions.
 
 The results highlighted the differences between several practical control approaches and provided engineering insight into controllability, efficiency, and performance trade-offs in DC motor operation.
-result: Compared three DC-motor torque-control methods and evaluated their torque-speed performance trade-offs.
