@@ -3,7 +3,7 @@
   --surface: #ffffff;
   --surface-soft: #eef3f9;
   --text: #10233f;
-  --muted: #5c6f8a;
+  --muted: #5a6a82;
   --line: #d8e1ee;
   --primary: #0f4c8a;
   --primary-strong: #0b3c6c;
@@ -146,15 +146,32 @@ html[data-theme="dark"] .site-header {
   border: 1px solid var(--line);
   background: var(--surface);
   color: var(--text);
-  padding: 10px 18px;
+  padding: 12px 20px;
   border-radius: 999px;
   font-weight: 700;
   cursor: pointer;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
 
 .theme-toggle:hover {
   border-color: var(--primary);
   color: var(--primary);
+  background: var(--surface-soft);
+}
+
+.theme-toggle::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M6 .278a.768.768 0 0 1 .08.858l.96 5.268a1 1 0 0 0-.363.938l-5.264.96a.768.768 0 0 1-.858.08zm6.584 0a.768.768 0 0 1 .08.858l.96 5.268a1 1 0 0 0-.363.938l-5.264.96a.768.768 0 0 1-.858.08zm.866 10.334a.768.768 0 0 1-.08.858l-.96 5.268a1 1 0 0 1-.363.938l5.264-.96a.768.768 0 0 1 .858-.08zm10.334-.866a.768.768 0 0 1 .08.858l-.96 5.268a1 1 0 0 1 .363.938l5.264-.96a.768.768 0 0 1-.858-.08zm-10.334.866a.768.768 0 0 1-.08.858l.96 5.268a1 1 0 0 0 .363.938l-5.264.96a.768.768 0 0 1 .858.08zM8 4a4 4 0 1 0 0 8 4 4 0 0 0 0-8zm0 4.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>');
+}
+
+html[data-theme="dark"] .theme-toggle::before {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M6 .278a.768.768 0 0 1 .08.858l.96 5.268a1 1 0 0 0-.363.938l-5.264.96a.768.768 0 0 1-.858.08zm6.584 0a.768.768 0 0 1 .08.858l.96 5.268a1 1 0 0 0-.363.938l-5.264.96a.768.768 0 0 1-.858.08zm.866 10.334a.768.768 0 0 1-.08.858l-.96 5.268a1 1 0 0 1-.363.938l5.264-.96a.768.768 0 0 1 .858-.08zm10.334-.866a.768.768 0 0 1 .08.858l-.96 5.268a1 1 0 0 1 .363.938l5.264-.96a.768.768 0 0 1-.858-.08zm-10.334.866a.768.768 0 0 1-.08.858l.96 5.268a1 1 0 0 0 .363.938l-5.264.96a.768.768 0 0 1 .858.08zM8 4a4 4 0 1 0 0 8 4 4 0 0 0 0-8zm0 4.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>');
 }
 
 .site-main {
@@ -808,28 +825,13 @@ html[data-theme="dark"] .filter-btn.active {
   padding: 20px 20px 22px;
 }
 
-.project-card__meta {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  margin: 0 0 8px;
-}
-
 .project-card__category {
-  margin: 0;
+  margin: 0 0 8px;
   color: var(--primary);
   font-size: 0.84rem;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-}
-
-.project-card__date {
-  margin: 0;
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: var(--muted);
-  white-space: nowrap;
 }
 
 .project-card__title {
@@ -1263,4 +1265,24 @@ html[data-theme="dark"] .filter-btn.active {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
+}
+
+/* Metric card description */
+.metric-card__description {
+  margin-top: 8px;
+  font-size: 0.88rem;
+  color: var(--muted);
+  line-height: 1.4;
+}
+
+/* Layperson summary for research section */
+.layperson-summary {
+  margin-top: 16px;
+  font-size: 1.05rem;
+  color: var(--text);
+  line-height: 1.6;
+  background: var(--surface-soft);
+  padding: 16px;
+  border-radius: var(--radius);
+  border-left: 4px solid var(--primary);
 }
