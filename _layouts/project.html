@@ -37,9 +37,23 @@ layout: default
   {% endif %}
 </div>
 
+        {% if page.metrics %}
+          <div class="project-metrics">
+            {% for metric in page.metrics %}
+              <div class="metric-card">
+                <span class="metric-card__value">{{ metric.value }}</span>
+                <span class="metric-card__label">{{ metric.label }}</span>
+              </div>
+            {% endfor %}
+          </div>
+        {% endif %}
+
         <div class="project-actions">
           {% if page.pdf %}
             <a class="btn btn-primary" href="{{ page.pdf | relative_url }}" target="_blank" rel="noopener">Open full PDF</a>
+          {% endif %}
+          {% if page.github %}
+            <a class="btn btn-secondary" href="{{ page.github }}" target="_blank" rel="noopener">View on GitHub</a>
           {% endif %}
           <a class="btn btn-secondary" href="mailto:waleedshereef65@gmail.com">Contact</a>
         </div>
@@ -47,14 +61,14 @@ layout: default
 
       <div class="project-hero__media">
         {% if page.image %}
-          <img src="{{ page.image | relative_url }}" alt="{{ page.title }}">
+          <img src="{{ page.image | relative_url }}" alt="{{ page.title }} - {{ page.category }}">
         {% else %}
           <div class="project-hero__placeholder">Project Preview</div>
         {% endif %}
       </div>
     </div>
 
-    <div class="project-layout">
+    <div class="project-layout{% unless page.pdf %} project-layout--full{% endunless %}">
       <article class="project-panel project-panel--main">
         {% if page.highlights %}
           <section class="project-section">
@@ -77,15 +91,13 @@ layout: default
         {% endif %}
       </article>
 
-      <aside class="project-panel project-panel--side">
-        <div class="report-header">
-          <h2>Embedded Report</h2>
-          {% if page.pdf %}
+      {% if page.pdf %}
+        <aside class="project-panel project-panel--side">
+          <div class="report-header">
+            <h2>Embedded Report</h2>
             <a href="{{ page.pdf | relative_url }}" target="_blank" rel="noopener">Open in new tab</a>
-          {% endif %}
-        </div>
+          </div>
 
-        {% if page.pdf %}
           <div class="pdf-frame-wrap">
             <iframe
               class="pdf-frame"
@@ -94,10 +106,8 @@ layout: default
               loading="lazy">
             </iframe>
           </div>
-        {% else %}
-          <p class="muted-text">No PDF file is linked for this project yet.</p>
-        {% endif %}
-      </aside>
+        </aside>
+      {% endif %}
     </div>
   </div>
 </section>
