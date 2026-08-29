@@ -84,6 +84,17 @@ description: Walid Sherif — power-systems analysis, grid integration, grid-awa
           aerodynamics and CFD, thermal management, and infrastructure engineering from my internship
           on the Al Hudayriat Island development in Abu Dhabi.
         </p>
+
+        <div class="key-takeaways">
+          <h4>Core Competencies:</h4>
+          <ul class="takeaways-list">
+            <li><span class="icon">⚡</span> Power systems analysis & grid integration</li>
+            <li><span class="icon">🔋</span> Large-scale optimization & computational engineering</li>
+            <li><span class="icon">🔌</span> Power electronics & harmonic analysis</li>
+            <li><span class="icon">💨</span> Aerodynamics & CFD simulation</li>
+            <li><span class="icon">🏗️</span> Infrastructure engineering & utility planning</li>
+          </ul>
+        </div>
       </div>
 
       <aside class="summary-side-card">
@@ -178,6 +189,16 @@ description: Walid Sherif — power-systems analysis, grid integration, grid-awa
           infrastructure can support about 1.26 GW of the 11.56 GW requested, guiding realistic
           data-center growth.
         </p>
+
+        <div class="key-takeaways">
+          <h4>Key Takeaways:</h4>
+          <ul class="takeaways-list">
+            <li><span class="icon">🔍</span> Solved a large-scale mixed-integer nonlinear planning problem for data-center placement</li>
+            <li><span class="icon">⚡</span> Enabled 1.26 GW of data-center load on existing Virginia grid infrastructure</li>
+            <li><span class="icon">🛡️</span> Verified with full AC power flow and 225-contingency N-1 stability analysis</li>
+            <li><span class="icon">📊</span> Validated surrogate model with perfect correlation (ρ=1.0000) to full physics</li>
+          </ul>
+        </div>
       </div>
 
       <div class="metric-grid">
@@ -327,6 +348,14 @@ description: Walid Sherif — power-systems analysis, grid integration, grid-awa
             <p class="project-card__category">{{ project.category }}</p>
             <h3 class="project-card__title">{{ project.title }}</h3>
             <p class="project-card__description">{{ project.description }}</p>
+
+            {% if project.highlights %}
+              <ul class="project-highlights">
+                {% for highlight in project.highlights %}
+                  <li>{{ highlight }}</li>
+                {% endfor %}
+              </ul>
+            {% endif %}
 
             {% if project.result %}
               <p class="project-card__result"><strong>Key Result:</strong> {{ project.result }}</p>
