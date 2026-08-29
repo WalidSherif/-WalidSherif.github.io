@@ -1267,6 +1267,125 @@ html[data-theme="dark"] .filter-btn.active {
   }
 }
 
+/* Key takeaways styling */
+.key-takeaways {
+  margin-top: 24px;
+  padding: 20px;
+  background: var(--surface-soft);
+  border-radius: var(--radius);
+  border-left: 4px solid var(--primary);
+}
+
+.key-takeaways h4 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  color: var(--text);
+  font-size: 1.1rem;
+}
+
+.takeaways-list {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.takeaways-list li {
+  margin-bottom: 8px;
+  color: var(--muted);
+  line-height: 1.5;
+  display: flex;
+  align-items: flex-start;
+}
+
+.takeaways-list li .icon {
+  margin-right: 8px;
+  flex-shrink: 0;
+  width: 20px;
+  text-align: center;
+}
+
+/* Enhanced focus visibility */
+:focus-visible {
+  outline: 3px solid var(--primary);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Improved hover states for cards */
+.expertise-card:hover,
+.focus-card:hover,
+.metric-card:hover,
+.project-card:hover,
+.timeline-item:hover,
+.figure-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(16, 35, 63, 0.12);
+}
+
+/* Sticky navigation enhancement */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(245, 247, 251, 0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--line);
+}
+
+html[data-theme="dark"] .site-header {
+  background: rgba(13, 20, 32, 0.92);
+}
+
+/* Section spacing improvements */
+.section {
+  padding: 90px 0;
+}
+
+.section-soft {
+  padding: 90px 0;
+}
+
+/* Research section specific enhancements */
+.research-headline {
+  margin-bottom: 32px;
+}
+
+.research-statement {
+  margin-bottom: 24px;
+}
+
+/* Project highlights styling */
+.project-highlights {
+  margin: 12px 0 0 0;
+  padding-left: 20px;
+  color: var(--muted);
+}
+
+.project-highlights li {
+  margin-bottom: 6px;
+  line-height: 1.4;
+  display: flex;
+  align-items: flex-start;
+}
+
+.project-highlights li::before {
+  content: "•";
+  color: var(--primary);
+  margin-right: 8px;
+  flex-shrink: 0;
+  width: 8px;
+}
+
+/* Enhanced hover states for cards */
+.expertise-card:hover,
+.focus-card:hover,
+.metric-card:hover,
+.project-card:hover,
+.timeline-item:hover,
+.figure-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(16, 35, 63, 0.12);
+}
+
 /* Metric card description */
 .metric-card__description {
   margin-top: 8px;
